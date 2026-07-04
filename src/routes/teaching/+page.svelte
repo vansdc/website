@@ -81,7 +81,17 @@
 			],
 			sciTitle: 'Science communication',
 			sciComm:
-				'Beyond formal courses, I like making research feel less distant. I built a blog on research methodology for upper-level students, with the motto "closer to science," and another on technology in education, gathering the basics of study design, research protocols, and epidemiological methods in plain language.'
+				'Beyond formal courses, I like making research feel less distant. I built a blog on research methodology for upper-level students, with the motto "closer to science," and another on technology in education, gathering the basics of study design, research protocols, and epidemiological methods in plain language.',
+			sciLinks: [
+				{
+					t: 'Más cerca de la ciencia — research methodology',
+					u: 'https://vansfoumind.wixsite.com/metodinvest'
+				},
+				{
+					t: 'Technology in education',
+					u: 'https://vansfoumind.wixsite.com/virtualedquality'
+				}
+			]
 		},
 		es: {
 			eyebrow: 'Docencia y tutoría',
@@ -166,7 +176,17 @@
 			],
 			sciTitle: 'Divulgación científica',
 			sciComm:
-				'Más allá de los cursos formales, me gusta hacer que la investigación se sienta menos lejana. Creé un blog de metodología de la investigación para estudiantes de nivel superior, con el lema "más cerca de la ciencia", y otro sobre tecnología en la educación, reuniendo en lenguaje claro lo básico del diseño de estudios, los protocolos de investigación y los métodos epidemiológicos.'
+				'Más allá de los cursos formales, me gusta hacer que la investigación se sienta menos lejana. Creé un blog de metodología de la investigación para estudiantes de nivel superior, con el lema "más cerca de la ciencia", y otro sobre tecnología en la educación, reuniendo en lenguaje claro lo básico del diseño de estudios, los protocolos de investigación y los métodos epidemiológicos.',
+			sciLinks: [
+				{
+					t: 'Más cerca de la ciencia — metodología de la investigación',
+					u: 'https://vansfoumind.wixsite.com/metodinvest'
+				},
+				{
+					t: 'Tecnología en la educación',
+					u: 'https://vansfoumind.wixsite.com/virtualedquality'
+				}
+			]
 		}
 	};
 
@@ -198,6 +218,13 @@
 
 <h2>{t.sciTitle}</h2>
 <p>{t.sciComm}</p>
+<ul class="sci-links">
+	{#each t.sciLinks as l}
+		<li>
+			<a href={l.u} target="_blank" rel="noopener noreferrer">{l.t}</a>
+		</li>
+	{/each}
+</ul>
 
 <style>
 	.lead {
@@ -238,5 +265,25 @@
 		text-transform: uppercase;
 		color: var(--ink-faint);
 		margin-top: 0.25rem;
+	}
+
+	.sci-links {
+		list-style: none;
+		margin: var(--space-4) 0 0;
+		padding: 0;
+	}
+
+	.sci-links li {
+		margin-bottom: 0.4rem;
+	}
+
+	.sci-links a {
+		color: var(--ink);
+		text-decoration: underline;
+		text-underline-offset: 0.2em;
+	}
+
+	.sci-links a:hover {
+		color: var(--ink-soft);
 	}
 </style>
