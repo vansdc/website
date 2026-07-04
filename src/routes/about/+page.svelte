@@ -30,7 +30,9 @@
 			animal:
 				'My favorite animal is the horse, a symbol of those who love freedom.',
 			offclock:
-				'Off the clock: classical piano, kung fu, and a long-standing interest in art, technology, and politics.'
+				'Off the clock: classical piano, kung fu, and a long-standing interest in art, technology, and politics.',
+			songLabel: 'A piece I keep coming back to',
+			songTitle: 'Valse — Evgeny Grinko'
 		},
 		es: {
 			eyebrow: 'Sobre mí',
@@ -60,7 +62,9 @@
 			animal:
 				'Mi animal favorito es el caballo, símbolo de quienes aman la libertad.',
 			offclock:
-				'Fuera del trabajo: piano clásico, kung fu y un interés de siempre por el arte, la tecnología y la política.'
+				'Fuera del trabajo: piano clásico, kung fu y un interés de siempre por el arte, la tecnología y la política.',
+			songLabel: 'Una pieza a la que siempre vuelvo',
+			songTitle: 'Valse — Evgeny Grinko'
 		}
 	};
 
@@ -98,6 +102,19 @@
 	<p>{t.scicomm}</p>
 	<p>{t.animal}</p>
 	<p class="off">{t.offclock}</p>
+
+	<figure class="song">
+		<figcaption>{t.songLabel}</figcaption>
+		<iframe
+			title={t.songTitle}
+			src="https://open.spotify.com/embed/track/41UTnVa6DvcVPUYoXWA97h?utm_source=generator"
+			width="100%"
+			height="152"
+			frameborder="0"
+			loading="lazy"
+			allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+		></iframe>
+	</figure>
 </section>
 
 <style>
@@ -210,6 +227,25 @@
 	.beyond .off {
 		color: var(--ink-faint);
 		font-size: 0.98rem;
+	}
+
+	.song {
+		margin: var(--space-6) 0 0;
+		max-width: 34rem;
+	}
+
+	.song figcaption {
+		font-family: var(--font-mono);
+		font-size: 0.72rem;
+		letter-spacing: 0.06em;
+		text-transform: uppercase;
+		color: var(--ink-faint);
+		margin-bottom: var(--space-2);
+	}
+
+	.song iframe {
+		border-radius: 12px;
+		display: block;
 	}
 
 	@media (max-width: 640px) {
